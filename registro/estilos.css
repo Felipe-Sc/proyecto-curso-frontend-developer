@@ -1,0 +1,173 @@
+:root
+  {
+    /* Colores */
+    --greenColor: #21c08b;
+    --purpleColor: #ab88ff;
+    --whiteColor: #fff;
+    /* Tipografías */
+    --normal: 16px;
+    --title: 26px;
+
+    /* Espaciado */
+    --space: 10px;
+
+    /* Box shadow */
+    --boxShadow: -1px 0px 56px -25px rgba(0,0,0,0.75);
+  }
+
+  html,
+  body
+  {
+    margin: 0;
+    padding: 0;
+    background-color: var(--greenColor);
+    font-family: 'Muli', system-ui;
+    color: var(--whiteColor);
+    font-size: var(--normal);
+  }
+
+  .header
+  {
+    padding: var(--space);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--whiteColor);
+    box-sizing: border-box;
+  }
+  .header__menu
+  {
+    text-align: right;
+  }
+
+  /*------------------------------------------- Formulario */
+  .login
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    background: linear-gradient(#21c08b, #ab88ff);
+    flex-direction: column;
+    min-height: calc(100vh - 200px);
+  }
+
+  .login__container
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    border: 2px solid var(--whiteColor);
+    box-shadow: var(--boxShadow);
+    border-radius: 40px;
+    padding: 6em 4em;
+    min-height: 500px;
+  }
+
+  .fadeInUp
+  {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    will-change: opacity, transform;
+  }
+
+  @keyframes fadeInUp
+  {
+    0%
+    {
+      transform: translate3d(0, 100px,0);
+      opacity: 0;
+    }
+    100%
+    {
+      transform: translateY(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  .login__container h2
+  {
+    font-weight: normal;
+    font-size: var(--title);
+  }
+
+  .login__container--form
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input
+  {
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid var(--whiteColor);
+    height: 50px;
+    padding-left: var(--space);
+    font-family: 'Muli', system-ui;
+    margin-bottom: var(--space);
+    outline: 0;
+    font-size: 16px;
+  }
+
+  ::placeholder{
+    color: white;
+  }
+
+  .button
+  {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: var(--space) 0;
+    width: 100%;
+    color: var(--whiteColor);
+    border-radius: 50px;
+    border: none;
+    padding: var(--space);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', system-ui;
+    letter-spacing: 1px;
+    outline: none;
+  }
+
+  .login__container a
+  {
+    color: var(--whiteColor);
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .login__container a:hover
+  {
+    text-decoration: underline;
+  }
+
+  /*----------------------------------------- Footer */
+  .footer
+  {
+    padding: calc(var(--space) * 2);
+    background-color: var(--purpleColor);
+    height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer a
+  {
+    margin-right: calc(var(--space) * 3);
+    color:white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .footer a:hover
+  {
+    text-decoration: underline;
+  }
